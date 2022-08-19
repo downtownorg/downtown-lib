@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useColorMode } from "downtown-lib";
-import { Button, DatePicker, Switch, Typography } from "antd";
+import { Button, Typography } from "antd";
 
 const App: FC = () => {
     const [mode, changeMode] = useColorMode();
