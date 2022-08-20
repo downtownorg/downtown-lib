@@ -12,12 +12,10 @@ export default [
             {
                 file: "./dist/cjs/index.js",
                 format: "cjs",
-                sourcemap: true,
             },
             {
                 file: "./dist/esm/index.js",
                 format: "esm",
-                sourcemap: true,
             },
         ],
         plugins: [
@@ -29,7 +27,7 @@ export default [
             }),
             terser(),
         ],
-        external: ["react", "react-dom", "antd", /\.css$/],
+        external: ["react", "react-dom", "antd", /@fontsource.*$/, /\.css$/],
     },
     {
         input: "dist/esm/index.d.ts",

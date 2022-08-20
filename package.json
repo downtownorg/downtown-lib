@@ -1,7 +1,6 @@
 {
     "name": "downtown-lib",
-    "version": "0.0.1",
-    "private": true,
+    "version": "0.0.1-3",
     "description": "Used with ReactJS on SoftJunk FiveM framework for styles on front-end!",
     "keywords": [
         "reactjs",
@@ -42,11 +41,14 @@
         "gulp": "gulp less",
         "lint": "eslint .",
         "lint-and-fix": "eslint . --fix",
-        "prepare": "yarn build && yarn clean",
+        "prepare": "yarn clean && yarn build",
         "watch": "rollup -c -w"
     },
+    "dependencies": {
+        "antd": "4.22.6",
+        "@fontsource/kanit": "4.5.9"
+    },
     "devDependencies": {
-        "@fontsource/kanit": "^4.5.9",
         "@rollup/plugin-babel": "^5.3.1",
         "@rollup/plugin-commonjs": "^22.0.2",
         "@rollup/plugin-node-resolve": "^13.3.0",
@@ -89,10 +91,8 @@
         "typescript": "^4.6.3"
     },
     "peerDependencies": {
-        "antd": "4.x",
         "react": "18.x",
-        "react-dom": "18.x",
-        "@fontsource/kanit": "4.5.x"
+        "react-dom": "18.x"
     },
     "publishConfig": {
         "access": "public"
