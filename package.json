@@ -1,6 +1,7 @@
 {
     "name": "downtown-lib",
-    "version": "0.0.2-1",
+    "version": "0.0.2-2",
+    "private": true,
     "description": "Used with ReactJS on SoftJunk FiveM framework for styles on front-end!",
     "keywords": [
         "reactjs",
@@ -45,8 +46,8 @@
         "watch": "rollup -c -w"
     },
     "dependencies": {
-        "antd": "4.22.6",
-        "@fontsource/kanit": "4.5.9"
+        "@fontsource/kanit": "4.5.9",
+        "antd": "4.22.6"
     },
     "devDependencies": {
         "@rollup/plugin-babel": "^5.3.1",
