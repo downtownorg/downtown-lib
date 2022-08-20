@@ -5,7 +5,9 @@ const Dark: FC = () => {
         <link
             rel="stylesheet"
             type="text/css"
-            href={"downtown-lib/themes/dark.css"}
+            href={
+                "https://raw.githubusercontent.com/downtownorg/downtown-lib/master/styles/dark.css"
+            }
         />
     );
 };

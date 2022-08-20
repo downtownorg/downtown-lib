@@ -11,7 +11,7 @@ gulp.task("less", function () {
     const plugins = [autoprefixer()];
 
     return gulp
-        .src("src/styles/*.less")
+        .src(["src/styles/dark.less", "src/styles/light.less"])
         .pipe(debug({ title: "Less files:" }))
         .pipe(
             gulpless({
@@ -26,7 +26,7 @@ gulp.task("less", function () {
                 debug: true,
             }),
         )
-        .pipe(gulp.dest("./example/public/downtown-lib/themes"));
+        .pipe(gulp.dest("./styles"));
 });
 
 exports.sync = gulp.series("less");
