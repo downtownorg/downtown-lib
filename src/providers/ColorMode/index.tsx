@@ -4,6 +4,9 @@ import Dark from "../../themes/Dark";
 import Light from "../../themes/Light";
 import "@fontsource/kanit";
 
+import DarkVariables from "./variables/dark";
+import LightVariables from "./variables/light";
+
 type ColorMode = "dark" | "light";
 
 interface ColorModeProviderProps {
@@ -26,7 +29,6 @@ const ColorModeProvider: FC<ColorModeProviderProps> = props => {
 
     return (
         <Fragment>
-            <Light />
             <ColorModeContext.Provider value={{ mode: sysmode, changeMode }}>
                 {sysmode === "light" ? <Light /> : <Dark />}
                 <ConfigProvider prefixCls="dwn">{children}</ConfigProvider>
@@ -35,10 +37,23 @@ const ColorModeProvider: FC<ColorModeProviderProps> = props => {
     );
 };
 
+type Variables<T> = T extends "light"
+    ? typeof LightVariables
+    : T extends "dark"
+    ? typeof DarkVariables
+    : never;
+
+function GetVariables<T extends ColorMode>(theme: T): Variables<T> {
+    return theme === "light"
+        ? (LightVariables as Variables<T>)
+        : (DarkVariables as Variables<T>);
+}
+
 export default ColorModeProvider;
 export {
     ColorMode,
     ColorModeDefault,
     ColorModeContext,
     ColorModeProviderProps,
+    GetVariables,
 };

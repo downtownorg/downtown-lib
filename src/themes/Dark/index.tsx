@@ -6,7 +6,7 @@ const Dark: FC = () => {
             rel="stylesheet"
             type="text/css"
             href={
-                "https://gitcdn.link/cdn/downtownorg/downtown-lib/master/styles/dark.css"
+                "https://gitcdn.link/cdn/downtownorg/downtown-lib/master/styles/build/dark.css"
             }
         />
     );

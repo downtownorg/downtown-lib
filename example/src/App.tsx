@@ -1,9 +1,10 @@
 import { FC } from "react";
-import { useColorMode } from "downtown-lib";
+import { useColorMode, useVariables } from "downtown-lib";
 import { Button, Typography } from "antd";
 
 const App: FC = () => {
     const [mode, changeMode] = useColorMode();
+    const variables = useVariables();
 
     const handleChangeMode = () => {
         changeMode(mode === "dark" ? "light" : "dark");
@@ -20,7 +21,9 @@ const App: FC = () => {
                 padding: "5px",
             }}
         >
-            <Typography.Text>Modo atual: {mode}</Typography.Text>
+            <Typography.Text style={{ color: variables.success }}>
+                Modo atual: {mode}
+            </Typography.Text>
             <Button type="primary" onClick={handleChangeMode}>
                 Mudar Modo
             </Button>

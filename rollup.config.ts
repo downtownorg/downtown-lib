@@ -1,9 +1,9 @@
 import resolve from "@rollup/plugin-node-resolve";
+import { terser } from "rollup-plugin-terser";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
-import { terser } from "rollup-plugin-terser";
-import { babel } from "@rollup/plugin-babel";
+import postcss from "rollup-plugin-postcss";
 
 export default [
     {
@@ -18,16 +18,8 @@ export default [
                 format: "esm",
             },
         ],
-        plugins: [
-            resolve(),
-            commonjs(),
-            babel({ babelHelpers: "bundled" }),
-            typescript({
-                tsconfig: "./tsconfig.json",
-            }),
-            terser(),
-        ],
-        external: ["react", "react-dom", "antd", /@fontsource.*$/, /\.css$/],
+        plugins: [postcss(), resolve(), commonjs(), typescript(), terser()],
+        external: ["react", "react-dom", "antd", /@fontsource.*$/],
     },
     {
         input: "dist/esm/index.d.ts",
