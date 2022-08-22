@@ -1,6 +1,6 @@
 {
     "name": "downtown-lib",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "private": true,
     "description": "Used with ReactJS on SoftJunk FiveM framework for styles on front-end!",
     "keywords": [
@@ -45,10 +45,9 @@
         "watch": "rollup -c -w"
     },
     "dependencies": {
-        "@fontsource/kanit": "4.5.9",
-        "@fontsource/nunito-sans": "^4.5.9",
+        "@emotion/react": "^11.10.0",
+        "@emotion/styled": "^11.10.0",
         "@mantine/core": "^5.2.0",
-        "@mantine/hooks": "^5.2.3",
         "@mantine/modals": "^5.2.3",
         "dayjs": "^1.11.5"
     },
