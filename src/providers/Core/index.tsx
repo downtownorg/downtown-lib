@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from "react";
-import { MantineProvider } from "@mantine/core";
+import { MantineProvider, Global } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import Theme from "../../styles/theme";
 
@@ -16,7 +16,16 @@ const CoreProvider: FC<CoreProps> = props => {
             withGlobalStyles
             withNormalizeCSS
         >
-            <ModalsProvider>{children}</ModalsProvider>
+            <ModalsProvider>
+                <Global
+                    styles={{
+                        body: {
+                            backgroundColor: "transparent",
+                        },
+                    }}
+                />
+                {children}
+            </ModalsProvider>
         </MantineProvider>
     );
 };
