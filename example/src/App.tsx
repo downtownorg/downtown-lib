@@ -1,15 +1,7 @@
 import { FC } from "react";
-import { useColorMode, useVariables } from "downtown-lib";
-import { Button, Typography } from "antd";
+import { Button } from "@mantine/core";
 
 const App: FC = () => {
-    const [mode, changeMode] = useColorMode();
-    const variables = useVariables();
-
-    const handleChangeMode = () => {
-        changeMode(mode === "dark" ? "light" : "dark");
-    };
-
     return (
         <div
             style={{
@@ -21,12 +13,7 @@ const App: FC = () => {
                 padding: "5px",
             }}
         >
-            <Typography.Text style={{ color: variables.success }}>
-                Modo atual: {mode}
-            </Typography.Text>
-            <Button type="primary" onClick={handleChangeMode}>
-                Mudar Modo
-            </Button>
+            <Button variant="outline">Iniciar os testes</Button>
         </div>
     );
 };

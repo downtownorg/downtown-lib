@@ -39,8 +39,6 @@
     "scripts": {
         "build": "rollup -c",
         "clean": "rimraf dist downtown-lib-*.tgz",
-        "gulp": "gulp less",
-        "gen-vars": "node var-gen",
         "lint": "eslint .",
         "lint-and-fix": "eslint . --fix",
         "prepare": "yarn clean && yarn build",
@@ -48,7 +46,11 @@
     },
     "dependencies": {
         "@fontsource/kanit": "4.5.9",
-        "antd": "4.22.6"
+        "@fontsource/nunito-sans": "^4.5.9",
+        "@mantine/core": "^5.2.0",
+        "@mantine/hooks": "^5.2.3",
+        "@mantine/modals": "^5.2.3",
+        "dayjs": "^1.11.5"
     },
     "devDependencies": {
         "@rollup/plugin-babel": "^5.3.1",

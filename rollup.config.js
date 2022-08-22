@@ -19,7 +19,7 @@ export default [
             },
         ],
         plugins: [postcss(), resolve(), commonjs(), typescript(), terser()],
-        external: ["react", "react-dom", "antd", /@fontsource.*$/],
+        external: ["react", "react-dom", "dayjs", /@mantine.*$/],
     },
     {
         input: "dist/esm/index.d.ts",
