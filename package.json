@@ -1,7 +1,7 @@
 {
     "name": "downtown-lib",
-    "version": "0.1.2-1",
     "private": true,
+    "version": "0.1.2-1",
     "description": "Used with ReactJS on SoftJunk FiveM framework for styles on front-end!",
     "keywords": [
         "reactjs",
@@ -97,6 +97,7 @@
         "rollup-plugin-postcss": "^4.0.2",
         "rollup-plugin-terser": "^7.0.2",
         "rollup-plugin-typescript2": "^0.33.0",
+        "rollup-plugin-url": "^3.0.1",
         "typescript": "^4.6.3"
     },
     "peerDependencies": {

@@ -1,9 +1,10 @@
-import resolve from "@rollup/plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
+import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
+import url from "rollup-plugin-url";
 
 export default [
     {
@@ -18,8 +19,18 @@ export default [
                 format: "esm",
             },
         ],
-        plugins: [postcss(), resolve(), commonjs(), typescript(), terser()],
-        external: ["react", "react-dom", "dayjs", /@mantine.*$/],
+        plugins: [
+            url({
+                include: ["**/*.woff", "**/*.woff2"],
+                limit: Infinity,
+            }),
+            postcss({ modules: true, minimize: true }),
+            resolve(),
+            commonjs(),
+            typescript(),
+            terser(),
+        ],
+        external: ["react", "react-dom", "dayjs", /@mantine.*$/, /@emotion.*$/],
     },
     {
         input: "dist/esm/index.d.ts",

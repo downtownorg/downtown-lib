@@ -2,6 +2,7 @@ import React, { FC, ReactNode } from "react";
 import { MantineProvider, Global } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import Theme from "../../styles/theme";
+import Fonts from "./fonts";
 
 interface CoreProps {
     children: ReactNode;
@@ -18,12 +19,16 @@ const CoreProvider: FC<CoreProps> = props => {
         >
             <ModalsProvider>
                 <Global
-                    styles={{
+                    styles={theme => ({
                         body: {
-                            backgroundColor: "transparent",
+                            backgroundColor: theme.other.bodyBackground,
                         },
-                    }}
+                        "*": {
+                            fontWeight: theme.other.fontWeight,
+                        },
+                    })}
                 />
+                <Fonts />
                 {children}
             </ModalsProvider>
         </MantineProvider>
