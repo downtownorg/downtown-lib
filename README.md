@@ -6,7 +6,7 @@ A styles package for downtown ui core, create by Softjunk and supported by many 
 
 -   React: 18.x
 -   React-Dom: 18.x
--   Antd: 4.x
+-   Mantine: 5.x
 
 ## 🚀 Installation
 

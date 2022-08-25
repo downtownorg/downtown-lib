@@ -1,8 +1,13 @@
 import React, { FC, ReactNode } from "react";
-import { MantineProvider, Global } from "@mantine/core";
+import { MantineProvider, MantineTheme, Global } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import Theme from "../../styles/theme";
 import Fonts from "./fonts";
+
+// Styles object for styling, on emotion
+declare module "@emotion/react" {
+    export interface Theme extends MantineTheme {}
+}
 
 interface CoreProps {
     children: ReactNode;

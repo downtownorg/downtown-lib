@@ -2,7 +2,8 @@ import type { MantineThemeOverride } from "@mantine/core";
 import "dayjs/locale/pt-br";
 
 export default {
-    primaryShade: 8,
+    colorScheme: "dark",
+    primaryShade: 9,
     datesLocale: "pt-br",
     dateFormat: "DD/MM/YYYY",
     fontFamily: "Clash Display",
@@ -14,6 +15,9 @@ export default {
     },
     components: {
         Button: {
+            defaultProps: {
+                size: "md",
+            },
             styles: {
                 root: { fontFamily: "Clash Display" },
             },
@@ -22,16 +26,16 @@ export default {
     primaryColor: "system",
     colors: {
         system: [
-            "#ffede9",
-            "#ffdcd3",
-            "#ffcabe",
-            "#ffb9a8",
-            "#ffa792",
-            "#ff957c",
-            "#ff8466",
-            "#ff7251",
-            "#ff613b",
-            "#ff4f25",
+            "#fff2f2",
+            "#ffd9d9",
+            "#ffbfbf",
+            "#ffa6a6",
+            "#ff8c8c",
+            "#ff7373",
+            "#ff5959",
+            "#ff4040",
+            "#ff2626",
+            "#ff1818",
         ],
     },
     other: {
