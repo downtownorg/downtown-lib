@@ -1,12 +1,12 @@
 # downtown-lib · ![npm](https://img.shields.io/npm/v/downtown-lib?style=flat-square) ![npm bundle size](https://img.shields.io/bundlephobia/min/downtown-lib?style=flat-square) ![npm](https://img.shields.io/npm/dm/downtown-lib?style=flat-square)
 
-A styles package for downtown ui core, create by Softjunk and supported by many developers
+A Mantine core interpreter for downtown styles, used by downtown developers on @softjunkorg framework. Typescript and ReactJS are the main tools used in this project.
 
 ## 🔌 Dependencies
 
--   React: 18.x
--   React-Dom: 18.x
--   Mantine: 5.x
+-   React: >= 18.0.0
+-   React-Dom: >= 18.0.0
+-   Mantine: >= 5.2.0
 
 ## 🚀 Installation
 

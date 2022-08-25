@@ -4,7 +4,7 @@ import { Button } from "@mantine/core";
 const App: FC = () => {
     return (
         <div>
-            <Button variant="filled">Tests</Button>
+            <Button variant="filled">Testing</Button>
         </div>
     );
 };

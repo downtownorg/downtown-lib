@@ -9,11 +9,17 @@ export default {
     fontFamily: "Clash Display",
     headings: {
         fontFamily: "Clash Display",
+        fontWeight: 600,
     },
     activeStyles: {
         transform: "scale(0.97)",
     },
     components: {
+        Input: {
+            defaultProps: {
+                size: "md",
+            },
+        },
         Button: {
             defaultProps: {
                 size: "md",
@@ -23,6 +29,7 @@ export default {
             },
         },
     },
+    focusRing: "never",
     primaryColor: "system",
     colors: {
         system: [
