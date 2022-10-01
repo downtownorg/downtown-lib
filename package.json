@@ -1,7 +1,6 @@
 {
     "name": "downtown-lib",
-    "version": "0.1.3-2",
-    "private": true,
+    "version": "0.1.3-3",
     "description": "Used with ReactJS on SoftJunk FiveM framework for styles on front-end!",
     "keywords": [
         "reactjs",
